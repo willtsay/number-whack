@@ -62,7 +62,7 @@ get '/highscores' do
   if session[:id] != nil
     user = User.find(session[:id])
     if user.high_score < params[:highscore].to_i
-      user.high_score = params[:highscore].to_i
+      user.update_attributes(high_score: params[:highscore].to_i)
     end
   end
 end
