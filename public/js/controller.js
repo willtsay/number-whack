@@ -118,7 +118,7 @@ Controller.prototype = {
     case 0:
       $("#gridplacer").css("display", "")
       $("#start").css("display", "none")
-      this.board.createBasicLevel(10, Math.floor(Math.random()*2500 + 500), 1)
+      this.board.createBasicLevel(10, Math.floor(Math.random()*2000 + 500), 1)
       this.view.signature = 0
       this.spawnMonstersLoop(this.view, this, this.board, 0)
       this.currentLevel++
@@ -129,7 +129,7 @@ Controller.prototype = {
       $("#start").css("display", "none")
       $("#death").text("")
       this.gameover = false
-      this.board.createBasicLevel(10, Math.floor(Math.random()*2500 + 500), 2)
+      this.board.createBasicLevel(10, Math.floor(Math.random()*2000 + 500), 2)
       this.view.signature = 0
       this.spawnMonstersLoop(this.view, this, this.board, 0)
       this.currentLevel++

@@ -101,12 +101,12 @@ Board.prototype = {
   createMedleyLevel:function(amount,delay,maxhp){
     this.level = []
     for ( var times= 0; times <= amount; times++ ) {
-      var monsterType = Math.floor(Math.random()*3)
+      var monsterType = Math.floor(Math.random()*5)
       var hp = Math.floor(Math.random()*maxhp+1)
-      if (monsterType == 1){
+      if (monsterType == 0 || monsterType == 1){
         this.level.push(this.createSpecialMonster(delay, hp))
       }
-      else if(monsterType ==2) {
+      else if(monsterType ==2 || monsterType == 3) {
         this.level.push(this.createBasicMonster(delay, hp))
 
       }
