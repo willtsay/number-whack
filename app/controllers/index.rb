@@ -7,11 +7,11 @@ STATE = SecureRandom.hex
 
 
 get '/' do
+  session[:id] = 1
   erb :index
 end
 
 get '/google_login' do
-  session[:id] = nil
   google_url = "https://accounts.google.com/o/oauth2/auth?" +
                     "response_type=code&"+
                     "client_id=#{CLIENT_ID}&"+
@@ -28,8 +28,6 @@ get '/logged_in' do
   user_info = HTTParty.get("https://www.googleapis.com/plus/v1/people/me?", {query: {access_token: access_token}})
   #check if their email is in the database, otherwise write them in. 
   email = user_info["emails"][0]["value"]
-  puts email
-  puts User.find_by_email(email)
   if User.find_by_email(email)
     session[:id] = User.find_by_email(email).id
   else
@@ -57,8 +55,7 @@ get '/highscores' do
   erb :highscores
 end
 
-get '/highscores' do
-  puts session[:id]
+get '/newscore' do
   if session[:id] != nil
     user = User.find(session[:id])
     if user.high_score < params[:highscore].to_i

@@ -65,7 +65,7 @@ Controller.prototype = {
     if (this.view.hp <= 0 || this.gameover){
       e.preventDefault()
       var ajaxRequest = $.ajax({
-        url: '/highscores',
+        url: '/newscore',
         type: 'GET',
         data: {highscore: this.view.points}
       })
