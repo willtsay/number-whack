@@ -1,0 +1,102 @@
+body {
+  font-family: 'Arimo', sans-serif;
+
+}
+
+.spawn_location{
+  font-size: 10px;
+}
+
+a:link{text-decoration:none;}
+
+nav {
+  font-size:3em;
+  display:block;
+  height:60px;
+  background-color: #659e75;
+}
+
+nav span{
+  float:right;
+}
+
+nav span a{
+  margin-left:50px;
+}
+
+#container {
+  width:100px;
+  height:50px;
+  margin:0 auto;
+  float:right;
+  background-color: #659e75;
+  
+  font-size:30px;
+  display:inline-block;
+}
+
+.info-bar{
+  margin-top:1%;
+  width: 600px;
+  height: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#d5d5d5;
+  border:20px solid #8b8b8b;
+  margin-bottom:0;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#game {
+  margin-top:1%;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  width:600px;
+  height:600px;
+  border:20px solid #8b8b8b;
+  background-color: #d5d5d5;
+}
+#gridplacer {
+  margin-top: 14px;
+  margin-left:14px;
+}
+
+.spawn_location {
+  width: 180px;
+  height:180px;
+  margin:1px;
+  border:5px solid #7f9294;
+  display:inline-block;
+  border-radius:10px;
+  box-shadow:0 0 0 20px #7f9294 inset;
+  position:relative;
+  background-color: #c8e99c;
+}
+
+#start{
+  font-size:100px;
+  text-align: center;
+}
+#death{
+  font-weight:900;
+  font-size:50px;
+  color:red;
+  text-align: center;
+}
+
+.holder {
+  width: 180px;
+  height:180px;
+  padding-left: 60px;
+  padding-top: 35px;
+  font-size:100px;
+  margin:auto;
+  position:fixed;
+}
+
+
+h1 {
+  text-align: center;
+}
