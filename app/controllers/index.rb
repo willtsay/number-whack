@@ -7,7 +7,6 @@ STATE = SecureRandom.hex
 
 
 get '/' do
-  session[:id] = 1
   erb :index
 end
 
