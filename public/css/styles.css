@@ -24,6 +24,14 @@ nav span a{
   margin-left:50px;
 }
 
+
+.scores {
+
+  height:40px;
+  background-color: #79bc75;
+  font-size: 30px;
+}
+
 #container {
   width:100px;
   height:50px;
