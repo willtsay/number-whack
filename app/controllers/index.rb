@@ -46,7 +46,8 @@ end
 
 get '/highscores' do
   @users = User.all
-  @users = @users.sort_by(user.highest_score).reverse!
+  @users = @users.sort_by{|user| user.highest_score}
+  @users.reverse!
   @users = @users.take(10)
   #sort the users by the highest of scores/ get the top 10. 
   erb :highscores
