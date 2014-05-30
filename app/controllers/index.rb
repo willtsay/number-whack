@@ -42,12 +42,13 @@ end
 get '/log_out' do
   #handle these with ajax requests??
   session[:id] = nil
+  redirect '/'
 end
 
 get '/highscores' do
   users = User.all
   scores = users.map do |user|
-    user.highscore
+    user.high_score
   end
   scores.sort!
   scores.reverse!
