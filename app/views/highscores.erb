@@ -1,4 +1,4 @@
 <%@users.each do |user|%>
 
-   <p class="scores"><img src=<%=user.picture%>> <%=user.first_name%>  SCORE: <%=user.high_score%></p>
+   <p class="scores"><img src=<%=user.picture%>> <span><%=user.first_name%>  SCORE: <%=user.high_score%></span></p>
 <%end%>
