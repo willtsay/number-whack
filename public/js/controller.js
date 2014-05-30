@@ -65,8 +65,8 @@ Controller.prototype = {
     if (this.view.hp <= 0 || this.gameover){
       e.preventDefault()
       var ajaxRequest = $.ajax({
-        url: 'http://radiant-harbor-3899.herokuapp.com/highscores',
-        type: 'POST',
+        url: '/highscores',
+        type: 'GET',
         data: {highscore: this.view.points}
       })
     }
