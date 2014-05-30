@@ -64,6 +64,7 @@ Controller.prototype = {
   whack: function(e){
     if (this.view.hp <= 0 || this.gameover){
       var ajaxRequest = $.ajax({
+        event.preventDefault
         url: '/highscores',
         type: 'post',
         data: {highscore: this.view.points}

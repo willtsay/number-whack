@@ -63,7 +63,6 @@ post '/highscores' do
     if user.high_score < params[:highscore].to_i
       user.high_score = params[:highscore].to_i
     end
-    user.high_score
   end
 end
 
