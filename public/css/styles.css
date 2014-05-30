@@ -33,12 +33,10 @@ nav span a{
 
   height:50px;
   background-color: #79bc75;
-  font-size: 30px;
+  font-size: 50px;
+  color:#FFFFFF;
 }
 
-.scores span{
-  padding-bottom:10px;
-}
 
 #container {
   width:100px;
