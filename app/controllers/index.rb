@@ -59,10 +59,10 @@ end
 post '/highscores' do
   if session[:id]
     user = User.find(session[:id])
-    if user.highscore < params[:highscore]
-      user.highscore = params[:highscore]
+    if user.high_score < params[:highscore]
+      user.high_score = params[:highscore]
     end
-    user.highscore
+    user.high_score
   end
 end
 
