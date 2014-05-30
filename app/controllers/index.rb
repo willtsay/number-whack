@@ -58,7 +58,8 @@ get '/highscores' do
 end
 
 get '/highscores' do
-  if session[:id]
+  puts session[:id]
+  if session[:id] != nil
     user = User.find(session[:id])
     if user.high_score < params[:highscore].to_i
       user.high_score = params[:highscore].to_i
