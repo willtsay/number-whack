@@ -1,4 +1,3 @@
-<%@scores%>
-<%@scores.each do |score| %>
-  <p class="scores">HIGHEST SCORE: <%=score%></p>
-<%end%>
+<%@users.each do |user|%>
+   <p class="scores"><img src=<%=user.picture%>> <%=user.first_name%>SCORE: <%=user.highest_score%></p>
+<%end>

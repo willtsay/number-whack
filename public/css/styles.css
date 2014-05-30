@@ -7,6 +7,10 @@ body {
   font-size: 10px;
 }
 
+a{
+  color:#FFFFFF;
+}
+
 a:link{text-decoration:none;}
 
 nav {
