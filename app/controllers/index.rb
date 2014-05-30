@@ -28,7 +28,9 @@ get '/logged_in' do
   user_info = HTTParty.get("https://www.googleapis.com/plus/v1/people/me?", {query: {access_token: access_token}})
   #check if their email is in the database, otherwise write them in. 
   email = user_info["emails"][0]["value"]
-  if User.find_by_email(email).any?
+  puts email
+  puts User.find_by_email(email)
+  if User.find_by_email(email)
     session[:id] = User.find_by_email(email).id
   else
     user = User.create(email: email)
