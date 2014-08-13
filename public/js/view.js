@@ -14,7 +14,7 @@ View.prototype = {
       this.board.board[location] = monster
       $("#" + location).css("color", this.color[monster.hp-1])
       monster.signature = this.signature
-      $("#" + location).attr("signature", this.signature)
+      $("#" + loc`ation).attr("signature", this.signature)
       var timer = monster.timer
       monster.startDespawn(monster,this, timer)
       this.signature ++
